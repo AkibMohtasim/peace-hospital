@@ -1,0 +1,8 @@
+.not-found-404 {
+  background-image: url("../../../images/error-404/error404.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+
+}

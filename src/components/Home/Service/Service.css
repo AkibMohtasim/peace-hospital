@@ -1,0 +1,12 @@
+.bullet-points{
+  margin: 20px 0px ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bullet-points>p{
+  margin-left: 5%;
+  font-size: 14px;
+  line-height: 0px;
+}
