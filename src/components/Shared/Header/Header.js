@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import useFirebase from '../../../hooks/useFirebase';
 const Header = () => {
+  const {user, logOut} = useFirebase();
   return (
     <>
       <Navbar sticky='top' bg="dark" variant="dark">
@@ -10,8 +11,9 @@ const Header = () => {
           <Navbar.Brand href="#home">Peace</Navbar.Brand>
           <Nav className="me-auto">
             <Link className='text-white px-5 text-decoration-none' to='/home'>Home</Link>
-            <Link className='text-white px-5 text-decoration-none' to='/features'>Features</Link>
-            <Link className='text-white px-5 text-decoration-none' to='/pricing'>Pricing</Link>
+            <Link className='text-white px-5 text-decoration-none' to='/login'>Login</Link>
+            <Link className='text-white px-5 text-decoration-none' to='/appointment'>Appointment</Link>
+            {user?.email && <button onClick={logOut}>Log Out</button>}
           </Nav>
         </Container>
       </Navbar>

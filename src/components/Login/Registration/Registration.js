@@ -1,41 +1,35 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import useFirebase from '../../../hooks/useFirebase';
 
+const Registration = () => {
 
-const Login = () => {
-  const { user, signInUsingGoogle, handleSignInWithEmailPassword, handleEmailChange, handlePasswordChange } = useFirebase();
+  const { handleRegistration, handleEmailChange, handlePasswordChange } = useFirebase();
+
   return (
     <div>
-      <h2>Please Login</h2>
-
-      <Form className='container-sm' onSubmit={handleSignInWithEmailPassword}>
+      <h2>Register</h2>
+      <Form className='container-sm' onSubmit={handleRegistration}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
-          <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" onBlur={handleEmailChange} />
         </Form.Group>
-
         <>
-          <Form.Label htmlFor="inputPassword5">Password</Form.Label>
+
           <Form.Control
             type="password"
             id="inputPassword5"
             aria-describedby="passwordHelpBlock"
+            placeholder="Enter password"
             onBlur={handlePasswordChange}
           />
         </>
         <br />
         <Button variant="primary" type="submit">
-          Login
+          Submit
         </Button>
       </Form>
-
-      <br />
-      <button onClick={signInUsingGoogle} className="btn btn-warning">Google Sign In</button> <br /><br />
-      <Link to='/registration'>New User? Register </Link> <br /><br />
     </div>
   );
 };
 
-export default Login;
+export default Registration;

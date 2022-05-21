@@ -1,0 +1,16 @@
+.form-background {
+  /* background: url('../../images/appointment/heartbeat.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto; */
+  background-color: rgba(78, 18, 66, 0.608);
+}
+
+.bg{
+  background: url('../../images/appointment/appointment-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
