@@ -5,7 +5,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const Registration = () => {
 
-  const { handleRegistration, handleEmailChange, handlePasswordChange } = useAuth();
+  const { handleRegistration, handleEmailChange, handlePasswordChange, handleGoogleLogin } = useAuth();
 
   return (
     <div>
@@ -27,6 +27,9 @@ const Registration = () => {
         <Button variant="primary" type="submit">
           Submit
         </Button>
+        <br /><br />
+        <p>or,</p>
+        <button onClick={handleGoogleLogin} className="btn btn-warning">Google Sign In</button>
       </Form>
       <br />
       <Link to='/login'>Already Registered? Login </Link>

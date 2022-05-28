@@ -13,9 +13,11 @@ const ServiceDetails = () => {
 
   console.log(details[serviceId])
   return (
-    <div>
-      <h2>Details</h2>
-      <p>{details[serviceId]}</p>
+    <div className='w-75 mx-auto mt-5'>
+      <h2 className='text-warning'>Details about the Service</h2>
+      <br /><br />
+      <img className='w-25 mx-auto mb-4' src={details[serviceId]?.img} alt="" />
+      <p className='my-4'>{details[serviceId]?.description}</p>
       <Link to='/appointment'><Button variant="outline-secondary mb-3">Schedule an appointment</Button></Link>
     </div>
   );

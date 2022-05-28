@@ -16,11 +16,7 @@ const useFirebase = () => {
 
 
   const signInUsingGoogle = () => {
-    signInWithPopup(auth, googleProvider)
-      .then(result => {
-        setUser(result.user)
-        console.log(result.user)
-      })
+    return signInWithPopup(auth, googleProvider)
   }
 
   const handleEmailChange = e => {

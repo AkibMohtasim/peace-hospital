@@ -1,11 +1,22 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 
 const Login = () => {
   const { user, signInUsingGoogle, handleSignInWithEmailPassword, handleEmailChange, handlePasswordChange } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const redirect_uri = location.state?.from || '/home';
+
+  const handleGoogleLogin = () => {
+    signInUsingGoogle()
+      .then(result => {
+        console.log(result.user);
+        navigate(redirect_uri);
+      })
+  }
   return (
     <div>
       <h2>Please Login</h2>
@@ -32,7 +43,7 @@ const Login = () => {
       </Form>
 
       <br />
-      <button onClick={signInUsingGoogle} className="btn btn-warning">Google Sign In</button> <br /><br />
+      <button onClick={handleGoogleLogin} className="btn btn-warning">Google Sign In</button> <br /><br />
       <Link to='/registration'>New User? Please Register </Link> <br /><br />
     </div>
   );
