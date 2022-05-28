@@ -6,7 +6,8 @@ import './Service.css';
 import { Link } from 'react-router-dom';
 
 const Service = ({ service }) => {
-  const { name, img, description } = service;
+  const { name, img, description, id } = service;
+  
   return (
     <Col lg={3} md={4} sm={12}>
       <Card variant='align-items-stretch'>
@@ -18,10 +19,7 @@ const Service = ({ service }) => {
             <p><FontAwesomeIcon icon={faArrowRightLong}></FontAwesomeIcon> Medical Test</p>
             <p><FontAwesomeIcon icon={faArrowRightLong}></FontAwesomeIcon> ICU or Cabin</p>
           </div>
-          {/* <Card.Text>
-            {description}
-          </Card.Text> */}
-          <Link to='/details'><Button variant="outline-secondary mb-3">Details</Button></Link> 
+          <Link to={`/services/${id}`}><Button variant="outline-secondary mb-3">Details</Button></Link> 
           <br />
           <Link to='/appointment'><Button variant="outline-secondary mb-3">Schedule an appointment</Button></Link>
         </Card.Body>

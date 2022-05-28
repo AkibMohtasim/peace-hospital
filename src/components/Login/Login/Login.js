@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 
 
 const Login = () => {
-  const { user, signInUsingGoogle, handleSignInWithEmailPassword, handleEmailChange, handlePasswordChange } = useFirebase();
+  const { user, signInUsingGoogle, handleSignInWithEmailPassword, handleEmailChange, handlePasswordChange } = useAuth();
   return (
     <div>
       <h2>Please Login</h2>
@@ -33,7 +33,7 @@ const Login = () => {
 
       <br />
       <button onClick={signInUsingGoogle} className="btn btn-warning">Google Sign In</button> <br /><br />
-      <Link to='/registration'>New User? Register </Link> <br /><br />
+      <Link to='/registration'>New User? Please Register </Link> <br /><br />
     </div>
   );
 };

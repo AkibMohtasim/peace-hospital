@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 const Header = () => {
-  const {user, logOut} = useFirebase();
+  const {user, logOut} = useAuth();
   return (
     <>
       <Navbar sticky='top' bg="dark" variant="dark">

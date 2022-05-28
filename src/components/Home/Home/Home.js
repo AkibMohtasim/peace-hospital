@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Login from '../../Login/Login/Login';
 import Services from '../../Services/Services';
-import Footer from '../../Shared/Footer/Footer';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
 

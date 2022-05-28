@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import useFirebase from '../../../hooks/useFirebase';
+import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Registration = () => {
 
-  const { handleRegistration, handleEmailChange, handlePasswordChange } = useFirebase();
+  const { handleRegistration, handleEmailChange, handlePasswordChange } = useAuth();
 
   return (
     <div>
@@ -14,7 +15,6 @@ const Registration = () => {
           <Form.Control type="email" placeholder="Enter email" onBlur={handleEmailChange} />
         </Form.Group>
         <>
-
           <Form.Control
             type="password"
             id="inputPassword5"
@@ -28,6 +28,9 @@ const Registration = () => {
           Submit
         </Button>
       </Form>
+      <br />
+      <Link to='/login'>Already Registered? Login </Link>
+      <br /><br />
     </div>
   );
 };

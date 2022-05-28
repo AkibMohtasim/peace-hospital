@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className="w-25 mt-5">
           <h4>Open for 24/7</h4>
-          <Link to='/service'>Services</Link> <br />
+          <Link to='/services'>Services</Link> <br />
           <Link to='/about'>About Us</Link> <br />
           <Link to='/success'>Success</Link> <br />
           <Link to='/support'>Support</Link>
