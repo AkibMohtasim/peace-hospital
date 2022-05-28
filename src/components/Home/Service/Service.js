@@ -6,7 +6,7 @@ import './Service.css';
 import { Link } from 'react-router-dom';
 
 const Service = ({ service }) => {
-  const { name, img, description, id } = service;
+  const { name, img, id } = service;
   
   return (
     <Col lg={3} md={4} sm={12}>

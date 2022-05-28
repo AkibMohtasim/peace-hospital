@@ -26,7 +26,7 @@ const Testimonial = () => {
             </blockquote>
           </Card.Body>
         </Card>
-
+        <br />
         <Card>
           <Card.Header><FontAwesomeIcon icon={faQuoteLeft} /> <FontAwesomeIcon icon={faQuoteRight} /></Card.Header>
           <Card.Body>
