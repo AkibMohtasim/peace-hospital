@@ -13,6 +13,7 @@ const Header = () => {
           <Nav className="me-auto">
             <Link className='text-dark px-5 text-decoration-none' to='/home'>Home</Link>
             <Link className='text-dark px-5 text-decoration-none' to='/appointment'>Appointment</Link>
+            <Link className='text-dark px-5 text-decoration-none' to='/services'>Services</Link>
 
             {user?.email ? <Button variant="outline-secondary" size="sm" onClick={logOut}>Log Out</Button> :
               <Link className='text-dark px-5 text-decoration-none' to='/login'>Login</Link>
