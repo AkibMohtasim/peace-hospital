@@ -3,10 +3,10 @@ import { Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 
 const ServiceDetails = () => {
-  const {serviceId} = useParams();
+  const { serviceId } = useParams();
   const [details, setDetails] = useState({});
   useEffect(() => {
-    fetch(`https://raw.githubusercontent.com/Programming-Hero-Web-Course3/healthcare-related-website-AkibMohtasim/main/public/serviceDetails.json?token=GHSAT0AAAAAABUHIN7L3HKYBVWKN3R2EEWWYUTGEXA`)
+    fetch(`https://api.jsonbin.io/b/62933b7e402a5b380212ea97`)
       .then(res => res.json())
       .then(data => setDetails(data))
   }, []);
