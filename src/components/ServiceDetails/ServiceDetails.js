@@ -6,9 +6,9 @@ const ServiceDetails = () => {
   const { serviceId } = useParams();
   const [details, setDetails] = useState({});
   useEffect(() => {
-    fetch(`https://api.jsonbin.io/b/62933b7e402a5b380212ea97`)
+    fetch(`https://api.jsonbin.io/v3/b/62933b7e402a5b380212ea97`)
       .then(res => res.json())
-      .then(data => setDetails(data))
+      .then(data => setDetails(data.record))
   }, []);
 
   console.log(details[serviceId])
